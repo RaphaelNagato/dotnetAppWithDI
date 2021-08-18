@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.UI", "ConsoleApp.UI\ConsoleApp.UI.csproj", "{132EC12D-29A7-4549-8B72-42474E6712D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp.Data", "ConsoleApp.Data\ConsoleApp.Data.csproj", "{CAA42592-AEC6-43DA-A22A-0C309C94FFB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{132EC12D-29A7-4549-8B72-42474E6712D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132EC12D-29A7-4549-8B72-42474E6712D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132EC12D-29A7-4549-8B72-42474E6712D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132EC12D-29A7-4549-8B72-42474E6712D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAA42592-AEC6-43DA-A22A-0C309C94FFB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAA42592-AEC6-43DA-A22A-0C309C94FFB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAA42592-AEC6-43DA-A22A-0C309C94FFB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAA42592-AEC6-43DA-A22A-0C309C94FFB3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
