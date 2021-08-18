@@ -18,4 +18,4 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 COPY --from=publish /src/ConsoleApp.Data/Data/Users.json /Data
 #ENTRYPOINT ["dotnet", "ConsoleApp.UI.dll"]
-CMD ASPNETCORE_URLS=http://*:$PORT dotnet ConsoleApp.UI.dll # for Production
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet ConsoleApp.UI.dll
