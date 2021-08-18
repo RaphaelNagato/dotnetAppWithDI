@@ -14,7 +14,8 @@ jobs:
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
           APP_NAME: ${{ 'dotnetappwithdi' }}
+          working-directory: ./ConsoleApp
         run: |
-          docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+          docker login --username=_ --password-stdin< $HEROKU_API_KEY registry.heroku.com
           heroku container:push web -a $APP_NAME
           heroku container:release web -a $APP_NAME
