@@ -4,18 +4,18 @@ on:
   push:
     branches:
       - main
-
+env:
+    HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+    APP_NAME: ${{ 'dotnetappwithdi' }}
 jobs:
   build_ums:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build and deploy the Docker image
-        env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-          APP_NAME: ${{ 'dotnetappwithdi' }}
-          working-directory: ./ConsoleApp
-        run: |
-          docker login --username=_ --password-stdin < $HEROKU_API_KEY registry.heroku.com
-          heroku container:push web -a $APP_NAME
-          heroku container:release web -a $APP_NAME
+      - name: Build Image
+          run: 
+            docker login --username=_ --password-stdin < $HEROKU_API_KEY registry.heroku.com
+      - name: Deploy
+          run: |
+            heroku container:push web -a $APP_NAME
+            heroku container:release web -a $APP_NAME
