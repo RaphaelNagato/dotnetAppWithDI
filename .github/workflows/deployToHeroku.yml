@@ -5,16 +5,16 @@ on:
     branches:
       - main
 env:
-    HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-    APP_NAME: ${{ 'dotnetappwithdi' }}
+  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+  APP_NAME: ${{ 'dotnetappwithdi' }}
 jobs:
   build_ums:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Build Image
-          run: docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+        run: docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
       - name: Deploy
-          run: |
-            heroku container:push web -a $APP_NAME
-            heroku container:release web -a $APP_NAME
+        run: |
+          heroku container:push web -a $APP_NAME
+          heroku container:release web -a $APP_NAME
